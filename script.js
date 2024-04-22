@@ -38,3 +38,41 @@ $(document).ready(function() {
         loop: true // Repeat the animation indefinitely.
     });
 });
+
+// Define a function to move an image in a specified direction.
+function moveImage(direction) {
+    // Select the element with id 'moveable-image'.
+    var $img = $('#moveable-image');
+    
+    // Based on the direction parameter, apply a corresponding translation using Anime.js.
+    switch (direction) {
+        case 'up': // Move the image up by 10px.
+            anime({
+                targets: $img.get(0),
+                translateY: '-=10',
+                easing: 'linear'
+            });
+            break;
+        case 'down': // Move the image down by 10px.
+            anime({
+                targets: $img.get(0),
+                translateY: '+=10',
+                easing: 'linear'
+            });
+            break;
+        case 'left': // Move the image left by 10px.
+            anime({
+                targets: $img.get(0),
+                translateX: '-=10',
+                easing: 'linear'
+            });
+            break;
+        case 'right': // Move the image right by 10px.
+            anime({
+                targets: $img.get(0),
+                translateX: '+=10',
+                easing: 'linear'
+            });
+            break;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- Ensuring proper rendering and touch zooming for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Playground</title>
+<!-- Linking the main stylesheet for custom styles -->
+    <link rel="stylesheet" href="styles.css">
+<!-- Including Animate.css for pre-defined animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- Adding jQuery for DOM manipulation and event handling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Including Anime.js for more complex animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+<!-- Section for demonstrating image movement with buttons -->
+    <section id="image-movement">
+        <!-- Animated section header -->
+        <h2 class="animate__animated animate__fadeInLeft">Section 1: Image Movement</h2>
+        <!-- Image that can be moved with buttons -->
+        <img src="image/Molly.jpg" id="moveable-image" alt="Moveable">
+        <!-- Movement control buttons with bounce-in animation -->
+        <button onclick="moveImage('up')" class="animate__animated animate__bounceIn">Up</button>
+        <button onclick="moveImage('down')" class="animate__animated animate__bounceIn">Down</button>
+        <button onclick="moveImage('left')" class="animate__animated animate__bounceIn">Left</button>
+        <button onclick="moveImage('right')" class="animate__animated animate__bounceIn">Right</button>
+    </section>
+
+    <!-- Section for interactive trivia question -->
+    <section id="interactive-trivia">
+        <!-- Animated section header -->
+        <h2 class="animate__animated animate__fadeInRight">Section 2: Interactive Trivia Question</h2>
+        <!-- Trivia question -->
+        <p>What is the capital of France?</p>
+        <!-- Answer buttons with light speed animation and data attribute for correctness -->
+        <button class="answer-btn animate__animated animate__lightSpeedInLeft" data-correct="false">London</button>
+        <button class="answer-btn animate__animated animate__lightSpeedInRight" data-correct="true">Paris</button>
+        <button class="answer-btn animate__animated animate__lightSpeedInLeft" data-correct="false">Berlin</button>
+        <!-- Feedback paragraph for user interaction results -->
+        <p id="feedback"></p>
+    </section>
+
+    <!-- Section for scroll-activated image movement -->
+    <section id="scroll-activated-image">
+        <!-- Animated section header -->
+        <h2 class="animate__animated animate__zoomIn">Section 3: Scroll-Activated Image Movement</h2>
+        <!-- Spacer to enable scrolling -->
+        <div style="height: 1000px;">Scroll to see the image move:</div>
+        <!-- Image that moves on scroll -->
+        <img src="image/Bulldog.jpg" id="scroll-image" alt="Scroll-Activated Image">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
